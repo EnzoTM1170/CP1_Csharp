@@ -5,7 +5,7 @@ class Program
     static void Main()
     {
         Console.WriteLine("Digite o nome do estudante:");
-        string nome = Console.ReadLine();  // nome agora é string mesmo
+        string nome = Console.ReadLine();  
 
         double soma = 0;
 
@@ -13,7 +13,7 @@ class Program
         {
             Console.WriteLine("Digite a nota " + i + ":");
             string notaTexto = Console.ReadLine();
-            // converte a string para double
+      
             double nota;
             if (!double.TryParse(notaTexto, out nota))
             {
@@ -23,8 +23,9 @@ class Program
             soma += nota;
         }
 
-        double media = soma / 3.0; // divide por 3 porque são três notas
+        double media = soma / 3.0; 
 
         Console.WriteLine("A média do estudante " + nome + " é " + media.ToString("F2"));
     }
 }
+
